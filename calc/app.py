@@ -22,3 +22,35 @@ def doOp(operation):
             answer = "invalid operation"
 
     return f'<html><body><h1>{answer}</h1></body></html>'
+
+@app.route('/add')
+def doOpAdd(operation):
+    a=int(request.args.get("a"))
+    b=int(request.args.get("b"))
+    answer = add(a,b)
+
+    return f'<html><body><h1>{answer}</h1></body></html>'
+
+@app.route('/sub')
+def doOpAdd(operation):
+    a=int(request.args.get("a"))
+    b=int(request.args.get("b"))
+    answer = sub(a,b)
+
+    return f'<html><body><h1>{answer}</h1></body></html>'
+
+@app.route('/mult')
+def doOpAdd(operation):
+    a=int(request.args.get("a"))
+    b=int(request.args.get("b"))
+    answer = mult(a,b)
+
+    return f'<html><body><h1>{answer}</h1></body></html>'
+
+@app.route('/div')
+def doOpAdd(operation):
+    a=int(request.args.get("a"))
+    b=int(request.args.get("b"))
+    answer = div(a,b)
+
+    return f'<html><body><h1>{answer}</h1></body></html>'
